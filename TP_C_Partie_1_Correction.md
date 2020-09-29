@@ -219,6 +219,9 @@ int main() {
     int reste;
     
     /* ECRIRE LE CODE ICI */
+    quotient = a / b;
+    reste = a % b;
+    /**/
     
     printf("quotient = %d, reste = %d", quotient, reste);
 }
@@ -280,10 +283,14 @@ Nous allons dans cet exercice essayer de comprendre les limites des variables. U
 int main() {
     
     /* ECRIRE LE CODE ICI */
+    int a = 2147483647;
+    /**/
     
     printf("a = %d\n", a);
     
     /* ECRIRE LE CODE ICI */
+    a++;
+    /**/
     
     printf("a = %d\n", a); 
 }
@@ -314,6 +321,10 @@ int main() {
     printf("avant permutation: a = %d, b = %d\n", a, b);
     
     /* ECRIRE LE CODE ICI */
+    int temp = a;
+    a = b;
+    b = temp;
+    /**/
     
     printf("apres permutation: a = %d, b = %d\n", a, b);
 }
@@ -410,6 +421,16 @@ Il faut penser à utiliser la division réelle plutôt que la division euclidien
 
 int main() {
     /* ECRIRE LE CODE ICI */
+    int a, b, c;
+    float moy;
+
+    printf("Donnez 3 entiers:\n");
+    scanf("%d%d%d", &a, &b, &c);
+
+    moy = (float) (a + b + c) / 3;
+
+    printf("La moyenne de ces trois entiers est: %.2f\n", moy);
+    /**/
 }
 ```
 
@@ -441,6 +462,15 @@ float a = fabs(-5); // a = 5.0
 
 int main() {
     /* ECRIRE LE CODE ICI */
+    float r1, r2, aire;
+
+    printf("Donnez les rayons des deux cercles:\n");
+    scanf("%f%f", &r1, &r2);
+
+    aire = fabs(3.14 * r1 * r1 - 3.14 * r2 * r2);
+
+    printf("L'aire de la surface entre les deux cercles est: %.4f\n", aire);
+    /**/
 }
 ```
 

@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TP_C_Partie_1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>TP_C_Partie1_Correction</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14532,6 +14532,9 @@ a = 2
     <span class="kt">int</span> <span class="n">reste</span><span class="p">;</span>
     
     <span class="cm">/* ECRIRE LE CODE ICI */</span>
+    <span class="n">quotient</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">;</span>
+    <span class="n">reste</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">;</span>
+    <span class="cm">/**/</span>
     
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;quotient = %d, reste = %d&quot;</span><span class="p">,</span> <span class="n">quotient</span><span class="p">,</span> <span class="n">reste</span><span class="p">);</span>
 <span class="p">}</span>
@@ -14613,10 +14616,14 @@ a = 2
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     
     <span class="cm">/* ECRIRE LE CODE ICI */</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2147483647</span><span class="p">;</span>
+    <span class="cm">/**/</span>
     
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;a = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
     
     <span class="cm">/* ECRIRE LE CODE ICI */</span>
+    <span class="n">a</span><span class="o">++</span><span class="p">;</span>
+    <span class="cm">/**/</span>
     
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;a = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> 
 <span class="p">}</span>
@@ -14680,6 +14687,10 @@ a = -2147483648
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;avant permutation: a = %d, b = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
     
     <span class="cm">/* ECRIRE LE CODE ICI */</span>
+    <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+    <span class="cm">/**/</span>
     
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;apres permutation: a = %d, b = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
 <span class="p">}</span>
@@ -14860,6 +14871,16 @@ entier = 15</pre>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="cm">/* ECRIRE LE CODE ICI */</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">moy</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Donnez 3 entiers:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d%d%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
+
+    <span class="n">moy</span> <span class="o">=</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;La moyenne de ces trois entiers est: %.2f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">moy</span><span class="p">);</span>
+    <span class="cm">/**/</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -14916,6 +14937,15 @@ La moyenne de ces trois entiers est: 5.67
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="cm">/* ECRIRE LE CODE ICI */</span>
+    <span class="kt">float</span> <span class="n">r1</span><span class="p">,</span> <span class="n">r2</span><span class="p">,</span> <span class="n">aire</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Donnez les rayons des deux cercles:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f%f&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r2</span><span class="p">);</span>
+
+    <span class="n">aire</span> <span class="o">=</span> <span class="n">fabs</span><span class="p">(</span><span class="mf">3.14</span> <span class="o">*</span> <span class="n">r1</span> <span class="o">*</span> <span class="n">r1</span> <span class="o">-</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">r2</span> <span class="o">*</span> <span class="n">r2</span><span class="p">);</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;L&#39;aire de la surface entre les deux cercles est: %.4f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">aire</span><span class="p">);</span>
+    <span class="cm">/**/</span>
 <span class="p">}</span>
 </pre></div>
 

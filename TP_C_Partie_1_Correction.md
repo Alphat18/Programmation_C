@@ -447,7 +447,7 @@ int main() {
 
 Attention: ```r1``` peut être supérieur ou inférieur à ```r2```.
 
-<img src="../ressources/cercle.jpg" alt="cercle" width="150"/>
+<img src="ressources/cercle.jpg" alt="cercle" width="150"/>
 
 La librairie ```<math.h>``` contient de nombreuses fonctions mathématiques, dont ```fabs``` qui permet de calculer la valeur absolue d'une variable.
 

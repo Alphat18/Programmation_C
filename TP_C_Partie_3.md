@@ -31,7 +31,7 @@ On peut ensuite **assigner une valeur** à une case du tableau en utilisant ces 
 tab[0] = 1;
 ```
 
-![alt text](../ressources/array.jpg)
+![alt text](ressources/array.jpg)
 
 A part ces quelques subtilités, un tableau fonctionne de la même manière qu'une variable. On peut par exemple effectuer des opérations sur ses valeurs.
 
@@ -197,7 +197,7 @@ tab[0][0] = 20;
 
 Un tableau à 2 dimensions peut se représenter comme un arrangement de cases en lignes et colonnes.
 
-![alt text](../ressources/tableau_2_dimensions.gif)
+![alt text](ressources/tableau_2_dimensions.gif)
 
 Une 3eme dimension rajouterait de la profondeur (un genre de cube). Il est possible de déclarer des tableau avec autant de dimensions que l'on souhaite, mais au delà de 3, il devient difficile de se répresenter la forme du tableau.
 

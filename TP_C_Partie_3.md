@@ -394,7 +394,7 @@ int main() {
     non est un palyndrome
 
 
-## <span style="color:red">Exercice 5</span>
+## <span style="color:red">Exercice 5 (Facultatif)</span>
 
 **Exercice:**
 

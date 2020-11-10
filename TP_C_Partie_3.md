@@ -94,12 +94,9 @@ int main() {
 
 - Lire un entier n, puis remplir un tableau de n éléments avec des entiers. Afficher le tableau, puis calculer le max, et le min de ses éléments.
 
-Remrque: la librairie `<limits.h>` donne accès à la valeur maximale et minimale des types en C (`INT_MAX` et `INT_MIN` pour les `int`).
-
 
 ```c
 #include <stdio.h>
-#include <limits.h> // donne accès à INT_MAX et INT_MIN
 
 int main() {
     int n;
@@ -112,7 +109,19 @@ int main() {
         scanf("%d", &tab[i]); // remplissage du tableau avec des entiers donnés par l'utilisateur
     }
     
-    /* ECRIRE LE CODE ICI */
+    int min = tab[0];
+    int max = tab[0];
+    for (int i = 0; i < n; i++) {
+        printf("tab[%d] = %d\n", i, tab[i]);
+        if (tab[i] > max) {
+            max = tab[i];
+        }
+        if (tab[i] < min) {
+            min = tab[i];
+        }
+    }
+    printf("min = %d\n", min);
+    printf("max = %d\n", max);
 }
 ```
 
@@ -155,7 +164,37 @@ Pas nécessairement dans un ordre précis, mais chaque élément ne doit être c
 #include <stdio.h>
 
 int main() {
-    /* ECRIRE LE CODE ICI */
+    int n;
+    printf("rentrer la taille du tableau\n");
+    scanf("%d", &n);
+
+    int tab[n];
+    int compte = 0;
+    while(compte < n) {
+        scanf("%d", &tab[compte]);
+        if (tab[compte] >= 100) {
+            printf("L'entier doit être inférieur à 100");
+        } else {
+            compte++;
+        }
+    }
+    
+    int tabOccurences[100];
+    for (int i = 0; i < 100; i++) {
+        tabOccurences[i] = 0;
+    }
+    
+    for (int i = 0; i < n; i++) {
+        printf("tab[%d] = %d\n", i, tab[i]);
+        
+        tabOccurences[tab[i]]++;
+    }
+    
+    for (int i = 0; i < 100; i++) {
+        if (tabOccurences[i] > 0) {
+            printf("%d est répété %d fois\n", i, tabOccurences[i]);
+        }
+    }
 }
 ```
 
@@ -215,7 +254,18 @@ Utiliser un tableau à 2 dimensions pour stocker les tables de multiplications.
 int main() {
     int table[9][9];
     
-    /* ECRIRE LE CODE ICI */
+    for (int i = 0; i < 9; i++) {
+        for (int j = 0; j < 9; j++) {
+            table[i][j] = (i + 1) * (j + 1);
+        }
+    }
+    
+    for (int i = 0; i < 9; i++) {
+        printf("table de multiplication de %d\n", i+1);
+        for (int j = 0; j < 9; j++) {
+            printf("%d * %d = %d\n", i+1, j+1, table[i][j]);
+        }
+    }
 }
 ```
 
@@ -385,7 +435,19 @@ int main() {
     
     int longeur = strlen(chaine); // retourne la taille de la chaine de caractere (attention au caractere de fin de chaine)
     
-    /* ECRIRE LE CODE ICI */
+    int palyndrome = 1;
+    for (int i = 0; i < (longeur / 2); i++) {
+        if (chaine[i] != chaine[longeur-1-i]) {
+            palyndrome = 0;
+            break;
+        }
+    }
+    
+    if (palyndrome) {
+        printf("%s est un palyndrome\n", chaine);
+    } else {
+        printf("%s n'est pas un palyndrome\n", chaine);
+    }
 }
 ```
 
@@ -418,7 +480,27 @@ int main() {
     int longueur1 = strlen(chaine1);
     int longueur2 = strlen(chaine2);
     
-    /* ECRIRE LE CODE ICI */
+    int sousChaine;
+    for (int i = 0; i < longueur1; i++) {
+        sousChaine = 1;
+        if (chaine1[i] == chaine2[0]) {
+            for (int j = 1; j < longueur2; j++) {
+                if (chaine1[i+j] != chaine2[j]) {
+                    sousChaine = 0;
+                    break;
+                }
+            }
+            if (sousChaine) {
+                break;
+            }
+        }
+    }
+    
+    if (sousChaine) {
+        printf("%s est une sous chaine de %s\n", chaine2, chaine1);
+    } else {
+        printf("%s n'est pas une sous chaine de %s\n", chaine2, chaine1);
+    }
 }
 ```
 

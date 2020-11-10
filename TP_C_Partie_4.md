@@ -201,7 +201,7 @@ La fonction `factoriel` est ici une fonction récursive (*rappel*: 5 factoriel `
 
 La **condition limite** est le moment ou il n'est plus nécessaire de calculer d'autres termes de la fonction. Or lorsque `n` vaut `0`, on ne peut plus le décrémenter et on retourne donc la définition du factoriel de 0: `0! = 1`.
 
-##  <span style="color:red">Exercice 2</span>
+##  <span style="color:red">Exercice 2 (Facultatif)</span>
 
 **Exercice**:
 

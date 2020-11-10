@@ -93,12 +93,9 @@ int main() {
 
 - Lire un entier n, puis remplir un tableau de n éléments avec des entiers. Afficher le tableau, puis calculer le max, et le min de ses éléments.
 
-Remrque: la librairie `<limits.h>` donne accès à la valeur maximale et minimale des types en C (`INT_MAX` et `INT_MIN` pour les `int`).
-
 
 ```c
 #include <stdio.h>
-#include <limits.h> // donne accès à INT_MAX et INT_MIN
 
 int main() {
     int n;

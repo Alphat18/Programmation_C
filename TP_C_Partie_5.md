@@ -10,7 +10,7 @@ Il est important de bien comprendre la manière dont les valeurs sont stockés e
 int var = 10;
 ```
 
-![adresse](./adress1.png)
+![adresse](./ressources/adress1.png)
 
 On assigne la valeur `10` à la variable `var`. Cependant, pour que la machine comprenne ou est stocké cette valeur, il est nécessaire d'utiliser un système d'**adressage**. Dans notre exemple sur la figure, l'adresse de la variable `var` est `177450`. En réalité, c'est souvent des grands nombres choisit aléatoirement par la machine lors de la création de la variable.
 
@@ -57,7 +57,7 @@ pointeur = &var;
 
 Ceci est cohérent avec ce que nous avons décrit plus haut. On accède à l'adresse de la variable var avec `&`, puis on l'assigne au pointeur.
 
-![pointeur](./adress2.png)
+![pointeur](./ressources/adress2.png)
 
 On voit sur l'image que le pointeur stocke l'adresse de la variable `var`. En faisant cela, il devient possible d'accéder à la **valeur** de `var` à partir du pointeur, cette fois en utilisant le symbole `*`:
 
@@ -90,7 +90,7 @@ int main() {
 
 Cela peut paraitre assez compliqué au départ. Les pointeurs rajoutent un certains nombre de notions très spécifiques. Mais il est important de bien comprendre ce qu'il se passe lorsque l'on manipule des pointeurs, afin de ne pas se perdre avec les notations (`&`, `*`, ...).
 
-![pointeur](./adress3.png)
+![pointeur](./ressources/adress3.png)
 
 L'image ci-dessus résume les notations est ce à quoi elles correspondent, n'hésitez pas à vous y référer.
 

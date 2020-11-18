@@ -182,7 +182,7 @@ if (!(a == 10))
 if (a != 10)
 ```
 
-##  <span style="color:red">Exercice 3</span>
+##  <span style="color:red">Exercice 3 (Facultatif)</span>
 
 **Exercice**:
 

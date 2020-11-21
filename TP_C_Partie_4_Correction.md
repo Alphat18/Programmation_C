@@ -150,7 +150,19 @@ Nous verrons plus tard qu'il est possible d'effectuer un **passage par pointeur*
 ```c
 #include <stdio.h>
 
-/* ECRIRE LE CODE ICI */
+int max_2(int a, int b) {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+int max_4(int a, int b, int c, int d) {
+    int max1 = max_2(a, b);
+    int max2 = max_2(c, d);
+    return max_2(max1, max2);
+}
 
 int main() {
     int a, b, c, d, max;
@@ -158,7 +170,7 @@ int main() {
     scanf("%d%d%d%d", &a, &b, &c, &d);
     printf("%d %d %d %d\n", a = 7, b = 26, c = 15, d = 3);
     
-    /* ECRIRE LE CODE ICI */
+    max = max_4(a, b, c, d);
 
     printf("maximum (%d, %d, %d, %d) = %d\n", a, b, c, d, max);
 }
@@ -207,7 +219,7 @@ La **condition limite** est le moment ou il n'est plus nécessaire de calculer d
 
 - Créer une fonction **récursive** `fibonacci` qui calcule le nième terme de la suite de Fibonacci.
 
-Rappel: La suite de Fibonacci est définie comme: ```Un = Un-1 + Un-2``` avec ```U1 = U0 = 1```.
+Rappel: La suite de Fibonacci est définie comme: ```Un = Un-1 + Un-2``` avec ```U1 = 1, U0 = 0```.
 
 **Attention:** Il y a 2 conditions limites (`U1` et `U0`).
 
@@ -215,7 +227,15 @@ Rappel: La suite de Fibonacci est définie comme: ```Un = Un-1 + Un-2``` avec ``
 ```c
 #include <stdio.h>
 
-/* ECRIRE LE CODE ICI */
+int fibonacci(int n) {
+   if (n == 0){
+      return 0;
+   } else if (n == 1) {
+      return 1;
+   } else {
+      return fibonacci(n-1) + fibonacci(n-2);
+   }
+}
 
 int main() {
     int n;
@@ -335,7 +355,16 @@ ex: `gcc ex3.c -o exo3 -lm`
 #include <stdio.h>
 #include <math.h> // permet d'utiliser sqrt et pow
 
-/* ECRIRE LE CODE ICI */
+typedef struct Point3D Point3D;
+struct Point3D {
+    float x;
+    float y;
+    float z;
+};
+
+float distance3D(Point3D point1, Point3D point2) {
+    return sqrt(pow(point2.x - point1.x, 2) + pow(point2.y - point1.y, 2) + pow(point2.z - point1.z, 2));
+}
 
 int main() {
     Point3D point1 = {10, 5, 7}, point2 = {5, 14, 9};
@@ -359,7 +388,12 @@ int main() {
 ```c
 #include <stdio.h>
 
-/* ECRIRE LE CODE ICI */
+typedef struct Etudiant Etudiant;
+struct Etudiant {
+    char nom[100];
+    char prenom[100];
+    int note;
+};
 
 int main() {
     Etudiant etudiants[100];
@@ -368,7 +402,16 @@ int main() {
     printf("Entrer le nombre d'etudiants\n");
     scanf("%d", &n);
     
-    /* ECRIRE LE CODE ICI */
+    for (int i = 0; i < n; i++) {
+        printf("Entrer le nom, prenom et note de l'etudiant\n");
+        scanf("%s%s%d", etudiants[i].nom, etudiants[i].prenom, &etudiants[i].note);
+    }
+    
+    for (int i = 0; i < n; i++) {
+        if (etudiants[i].note >= 10) {
+            printf("%s %s a eu %d\n", etudiants[i].nom, etudiants[i].prenom, etudiants[i].note);
+        }
+    }
     
     return 0;
 }
